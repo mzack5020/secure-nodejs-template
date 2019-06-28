@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/scripts/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/scripts/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="stylesheet" href="register.css" />
+
+    <title>Register</title>
+</head>
+
+<body>
+    <navbar active-link="register"></navbar>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        Welcome to the template application! Already have an account? <a href="/login">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <form id="registration-form" class="col-6 offset-3">
+                <div class="row">
+                    <div class="form-group col-6">
+                        <label for="name">Name</label>
+                        <input name="name" id="name" type="text" required class="form-control validate">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="email">Email</label>
+                        <input name="email" id="email" type="email" required class="form-control validate">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-12">
+                        <label for="pw">Password</label>
+                        <input name="pw" id="pw" type="password" required class="form-control validate"
+                            oninput="validatePw()">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-12">
+                        <label for="pwConfirm">Confirm Password</label>
+                        <input name="pwConfirm" id="pwConfirm" type="password" required class="form-control validate">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="list-group">
+                            <li id="pw-length" class="list-group-item">Use at least 8 characters</li>
+                            <li id="pw-upper" class="list-group-item">Use at least 1 UPPERCASE letter</li>
+                            <li id="pw-lower" class="list-group-item">Use at least 1 lowercase letter</li>
+                            <li id="pw-special" class="list-group-item">Use at least 1 speci@l ch@ract3r</li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                <div class="row text-right">
+                    <button id="register-button" class="btn btn-success" onclick="register()" type="button"
+                        name="action">
+                        <div id="register-tag">Register <i class="fas fa-clipboard-check"></i></div>
+                        <div id="register-loading" class="preloader-wrapper small active" style="display: none">
+                            Loading...
+                        </div>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer></footer>
+
+    <script src="/scripts/jquery/dist/jquery.min.js"></script>
+    <script src="/scripts/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/scripts/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="../util/navbar.js"></script>
+    <script src="../util/footer.js"></script>
+    <script src="register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/scripts/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/scripts/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="stylesheet" href="login.css" />
+
+    <title>A2MP - Login</title>
+</head>
+
+<body>
+    <navbar active-link="login"></navbar>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body text-center">
+                        Welcome to the template application! Login or <a href="/register">Register</a> to continue
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row">
+            <form id="login-form" action="/login" method="POST" class="col-6 offset-3">
+                <div class="row">
+                    <div class="form-group col">
+                        <input name="username" id="username" type="text" class="form-control validate">
+                        <label for="username">Username/Email</label>
+                    </div>
+                    <div class="form-group col">
+                        <input name="pw" id="pw" type="password" class="form-control validate">
+                        <label for="pw">Password</label>
+                    </div>
+                </div>
+                <login-error-msg></login-error-msg>
+                <div class="row text-center">
+                    <div class="col">
+                        <button class="btn btn-success" onclick="login()" type="button" name="action">
+                            Login <i class="fas fa-sign-in-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer></footer>
+
+    <script src="/scripts/jquery/dist/jquery.min.js"></script>
+    <script src="/scripts/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/scripts/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="../util/navbar.js"></script>
+    <script src="../util/footer.js"></script>
+    <script src="login.js"></script>
+</body>
+
+</html>

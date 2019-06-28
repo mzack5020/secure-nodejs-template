@@ -1,0 +1,21 @@
+{
+    "aws": {
+        "cognito": {
+            "userPoolId": "us-east-1_lZOdp7l7k",
+            "clientId": "5sfin97k0n587v208n4akg3do3"
+        },
+        "region": "us-east-1"
+    },
+    "cookies": {
+        "keys": ["X-Session-Token"]
+    },
+    "env": {
+        "prod": false
+    },
+    "express": {
+        "port": 3000,
+        "sessionTimeout": 7200000,
+        "cookieName": "fsc_session_id",
+        "sessionSecret": "tH!s_I$_tH3_S3cR3t"
+    }
+}
