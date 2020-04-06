@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "NodeJS application designed with a shell framework for user authentication. Built on Express, it will only send the files needed for the current view to the client, speeding up rendering and content delivery as well as enhancing security by hiding unneeded assets.",
   "main": "server.js",
+  "repository": "https://github.com/mzack5020/secure-nodejs-template",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "start": "nodemon"
   },
   "author": "Matthew Zackschewski",
@@ -16,6 +18,9 @@
     "jquery": "^3.4.1"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^2.0.2"
+  },
+  "resolutions": {
+    "minimist": "^1.2.3"
   }
 }
