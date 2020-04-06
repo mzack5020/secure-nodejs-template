@@ -52,16 +52,17 @@
                 <div class="row">
                     <div class="form-group col-12">
                         <label for="pwConfirm">Confirm Password</label>
-                        <input name="pwConfirm" id="pwConfirm" type="password" required class="form-control validate">
+                        <input name="pwConfirm" id="pwConfirm" type="password" required class="form-control validate"
+                            oninput="validatePw()">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <ul class="list-group">
-                            <li id="pw-length" class="list-group-item">Use at least 8 characters</li>
-                            <li id="pw-upper" class="list-group-item">Use at least 1 UPPERCASE letter</li>
-                            <li id="pw-lower" class="list-group-item">Use at least 1 lowercase letter</li>
-                            <li id="pw-special" class="list-group-item">Use at least 1 speci@l ch@ract3r</li>
+                            <li id="pw-length" class="list-group-item text-white">Use at least 8 characters</li>
+                            <li id="pw-upper" class="list-group-item text-white">Use at least 1 UPPERCASE letter</li>
+                            <li id="pw-lower" class="list-group-item text-white">Use at least 1 lowercase letter</li>
+                            <li id="pw-special" class="list-group-item text-white">Use at least 1 speci@l ch@ract3r</li>
                         </ul>
                     </div>
                 </div>

@@ -9,26 +9,29 @@ var pwSpecial = false;
 
 const checkValidity = (event) => {
     var isValid = true;
+
     if (!$('#name').val())
         isValid = false;
 
     if (isValid) {
         if (!$('#pw').val())
-            isValid = false;
+        isValid = false;
     }
-
+    
     if (isValid) {
+        console.log("HIT");
         if (!$('#email')[0].checkValidity())
             isValid = false;
     }
 
     if (isValid) {
         if (pwLength && pwUpper && pwLower && pwSpecial) {
-            if ($('pw').val() != $('pwConfirm').val()) {
+            if ($('#pw').val() != $('#pwConfirm').val()) {
                 console.error('Passwords don\'t match');
                 isValid = false;
             }
-        }
+        } else
+            isValid = false;
     }
 
     if (!isValid) {
@@ -97,8 +100,8 @@ const setLoading = (isLoading) => {
 const validatePw = () => {
     let pw = $('#pw').val();
     let pwHelperIds = ['pw-length', 'pw-upper', 'pw-lower', 'pw-special'];
-    let invalidSectionClass = 'grey lighten-2';
-    let validSectionClass = 'green accent-3';
+    let invalidSectionClass = 'bg-secondary';
+    let validSectionClass = 'bg-success';
 
     if (!pw) {
         for (var id in pwHelperIds) {
