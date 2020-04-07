@@ -19,7 +19,6 @@ const checkValidity = (event) => {
     }
     
     if (isValid) {
-        console.log("HIT");
         if (!$('#email')[0].checkValidity())
             isValid = false;
     }
